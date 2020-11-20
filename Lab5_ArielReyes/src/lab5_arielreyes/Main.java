@@ -83,9 +83,27 @@ Random ale = new Random();
         Eliminar_modificar = new javax.swing.JPopupMenu();
         Eliminar = new javax.swing.JMenuItem();
         Modificar = new javax.swing.JMenuItem();
+        Carreras = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jTextField3 = new javax.swing.JTextField();
+        rd_ing = new javax.swing.JRadioButton();
+        rd_lic = new javax.swing.JRadioButton();
+        rd_ciencia = new javax.swing.JRadioButton();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jLabel1.setText("Nombre: ");
 
@@ -269,6 +287,123 @@ Random ale = new Random();
         });
         Eliminar_modificar.add(Modificar);
 
+        jLabel3.setText("Carreras");
+
+        jLabel6.setText("Nombre: ");
+
+        jLabel7.setText("Facultad: ");
+
+        jLabel8.setText("Costo mensual:  ");
+
+        jLabel9.setText("Jefe carrera: ");
+
+        carreras.add(rd_ing);
+        rd_ing.setText("Ingenieria ");
+
+        carreras.add(rd_lic);
+        rd_lic.setText("Licenciatura");
+
+        carreras.add(rd_ciencia);
+        rd_ciencia.setText("Ciencias de la salud");
+        rd_ciencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rd_cienciaActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Nombre de la carrera: ");
+
+        jButton2.setText("Agregar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CarrerasLayout = new javax.swing.GroupLayout(Carreras.getContentPane());
+        Carreras.getContentPane().setLayout(CarrerasLayout);
+        CarrerasLayout.setHorizontalGroup(
+            CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarrerasLayout.createSequentialGroup()
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CarrerasLayout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(CarrerasLayout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jFormattedTextField1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CarrerasLayout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField2))
+                            .addGroup(CarrerasLayout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(CarrerasLayout.createSequentialGroup()
+                        .addGap(285, 285, 285)
+                        .addComponent(jLabel3))
+                    .addGroup(CarrerasLayout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CarrerasLayout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel11)
+                            .addComponent(rd_ing))
+                        .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CarrerasLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(CarrerasLayout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton2)
+                                    .addComponent(rd_lic))
+                                .addGap(59, 59, 59)
+                                .addComponent(rd_ciencia)))))
+                .addContainerGap(187, Short.MAX_VALUE))
+        );
+        CarrerasLayout.setVerticalGroup(
+            CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarrerasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(50, 50, 50)
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(CarrerasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rd_ing)
+                    .addComponent(rd_lic)
+                    .addComponent(rd_ciencia))
+                .addGap(31, 31, 31)
+                .addComponent(jButton2)
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        jLabel10.setText("jLabel10");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu3.setText("Menu");
@@ -290,6 +425,15 @@ Random ale = new Random();
             }
         });
         jMenu3.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setText("Agregar carrera");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
 
@@ -470,6 +614,52 @@ Random ale = new Random();
         model.reload();
     }//GEN-LAST:event_ModificarActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        carrer();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void rd_cienciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rd_cienciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rd_cienciaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+            String nombre = jTextField1.getText();
+            String facultad = jTextField2.getText();
+            float costo_mensual = Float.parseFloat(jFormattedTextField1.getText());
+            String jefe_carrera = jTextField3.getText();
+            String nombre_carrera = jTextField4.getText();
+            if (rd_ing.isSelected()) {
+                ing_sistemas siste = new ing_sistemas(nombre_carrera, nombre, facultad, costo_mensual, jefe_carrera);
+                DefaultComboBoxModel sis = (DefaultComboBoxModel)cb_sistemas.getModel(); 
+                sis.addElement(siste);
+                cb_sistemas.setModel(sis);
+
+            }
+            if (rd_lic.isSelected()) {
+                Licencuatura lic = new Licencuatura(nombre_carrera, nombre, facultad, costo_mensual, jefe_carrera);
+                DefaultComboBoxModel lic_mo = (DefaultComboBoxModel) cb_licenciatura.getModel();
+                lic_mo.addElement(lic);
+                cb_licenciatura.setModel(lic_mo);
+                
+            }
+            if(rd_ciencia.isSelected()){
+                ciencias_salud cin = new ciencias_salud(nombre_carrera, nombre, facultad, costo_mensual, jefe_carrera);
+                DefaultComboBoxModel cien  = (DefaultComboBoxModel)cb_ciencias_salud.getModel(); 
+                cien.addElement(cin);
+                cb_ciencias_salud.setModel(cien);
+                
+            }
+            JOptionPane.showMessageDialog(this, "Correcto");
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "ERROR");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -512,10 +702,17 @@ Random ale = new Random();
         estudian.setLocationRelativeTo(this);
         estudian.setVisible(true);
     }
+     public void carrer(){
+         Carreras.pack();
+        Carreras.setModal(true);
+        Carreras.setLocationRelativeTo(this);
+        Carreras.setVisible(true);
+    }
     DefaultMutableTreeNode nodo_seleccionado; 
     carrera cliente_seleccionado; 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Carreras;
     private javax.swing.JMenuItem Eliminar;
     private javax.swing.JPopupMenu Eliminar_modificar;
     private javax.swing.JMenuItem Modificar;
@@ -525,20 +722,37 @@ Random ale = new Random();
     private javax.swing.JComboBox<String> cb_sistemas;
     private javax.swing.JDialog estudian;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JTree jTree1;
     private javax.swing.JList<String> jl_estudiantes;
     private javax.swing.JTextField jt_estudiantes;
     private javax.swing.JRadioButton rb_hombre;
     private javax.swing.JRadioButton rd_cienca_salud;
+    private javax.swing.JRadioButton rd_ciencia;
+    private javax.swing.JRadioButton rd_ing;
+    private javax.swing.JRadioButton rd_lic;
     private javax.swing.JRadioButton rd_licenciatura;
     private javax.swing.JRadioButton rd_mujer;
     private javax.swing.JRadioButton rd_sistema;
