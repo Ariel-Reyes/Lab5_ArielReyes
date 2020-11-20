@@ -31,7 +31,7 @@ public class Licencuatura extends carrera {
 
     @Override
     public String toString() {
-        return "Licencuatura{" + "tipo=" + tipo + '}';
+        return  tipo ;
     }
 
 }

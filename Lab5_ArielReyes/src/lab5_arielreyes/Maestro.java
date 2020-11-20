@@ -5,42 +5,32 @@
  */
 package lab5_arielreyes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ariel
  */
-public class estudiantes {
+public class Maestro {
     String nombre; 
     String apellido; 
-    int num_cuenta; 
-    int edad; 
-    String sexo; 
-    carrera carre; 
+    float salario; 
+    int edad;
+    ArrayList<clases> clase = new ArrayList(); 
 
-    public estudiantes() {
+    public Maestro() {
     }
 
-    public estudiantes(String nombre, String apellido, int num_cuenta, int edad, String sexo, carrera carre) {
+    public Maestro(String nombre, String apellido, float salario, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.num_cuenta = num_cuenta;
+        this.salario = salario;
         this.edad = edad;
-        this.sexo = sexo;
-        this.carre = carre; 
     }
 
     public String getNombre() {
         return nombre;
     }
-
-    public carrera getCarre() {
-        return carre;
-    }
-
-    public void setCarre(carrera carre) {
-        this.carre = carre;
-    }
-    
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -54,12 +44,12 @@ public class estudiantes {
         this.apellido = apellido;
     }
 
-    public int getNum_cuenta() {
-        return num_cuenta;
+    public float getSalario() {
+        return salario;
     }
 
-    public void setNum_cuenta(int num_cuenta) {
-        this.num_cuenta = num_cuenta;
+    public void setSalario(float salario) {
+        this.salario = salario;
     }
 
     public int getEdad() {
@@ -70,17 +60,18 @@ public class estudiantes {
         this.edad = edad;
     }
 
-    public String getSexo() {
-        return sexo;
+    public ArrayList<clases> getClase() {
+        return clase;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setClase(ArrayList<clases> clase) {
+        this.clase = clase;
     }
 
     @Override
     public String toString() {
-        return nombre;
+        return "Maestro{" + "nombre=" + nombre + ", apellido=" + apellido + ", salario=" + salario + ", edad=" + edad + ", clase=" + clase + '}';
     }
-
+    
+    
 }

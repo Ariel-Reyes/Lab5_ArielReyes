@@ -30,7 +30,7 @@ public class ing_sistemas extends carrera{
 
     @Override
     public String toString() {
-        return "ing_sistemas{" + "tipo=" + tipo + '}';
+        return tipo ;
     }
 
 }

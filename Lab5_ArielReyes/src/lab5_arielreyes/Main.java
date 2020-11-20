@@ -5,17 +5,47 @@
  */
 package lab5_arielreyes;
 
+import java.util.Random;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+
 /**
  *
  * @author Ariel
  */
 public class Main extends javax.swing.JFrame {
+Random ale = new Random(); 
 
     /**
      * Creates new form Main
      */
     public Main() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
+        // ingenuiera
+        DefaultComboBoxModel siste = (DefaultComboBoxModel) cb_sistemas.getModel();
+        siste.addElement(new ing_sistemas("Sistemas computacionales", "Ingeneria", "Sistemas", (float) 1000.3, "Bocanegra"));
+        siste.addElement(new ing_sistemas("Industrial y de sistemas", "Ingeneria", "Facultad de industrial", (float) 1240.3, "Mario Eduardo"));
+        siste.addElement(new ing_sistemas("Biomedica y Energia ", "Ingeneria", "Facultad de Energia", (float) 3240.3, " Jose Lopez"));
+        cb_sistemas.setModel(siste);
+        // Licenciatura
+        DefaultComboBoxModel lice = (DefaultComboBoxModel) cb_licenciatura.getModel();
+        lice.addElement(new Licencuatura("Finanzas", "Licenciatura", "Facultad de Finanzas y Economia", (float) 34444.3, "Alejandra Chavez"));
+        lice.addElement(new Licencuatura("Derecho", "Licenciatura", "Facultad de Derecho", (float) 344.3, "Julio Chavez"));
+        lice.addElement(new Licencuatura("Administracion de empresas", "Licenciatura", "Facultad de Desarrollo", (float) 34433.3, "Carlos Cano"));
+        lice.addElement(new Licencuatura("Diseño", "Licenciatura", "Facultad de desarrollo grafico", (float) 5000.3, "Lupe Cano"));
+        lice.addElement(new Licencuatura("Mecatronica", "Licenciatura", "Facultad de Sistemas", (float) 50300.3, "Maria Noca"));
+        cb_licenciatura.setModel(lice);
+        // ciencias de salud 
+        DefaultComboBoxModel ciencia = (DefaultComboBoxModel) cb_ciencias_salud.getModel();
+        ciencia.addElement(new ciencias_salud("Medicina y cirugia ", "Ciencias de salud", "Medicina", (float) 9000.2, "Esteban Martinez"));
+        ciencia.addElement(new ciencias_salud("Odontologia ", "Ciencias de salud", "Medicina", (float) 9000.2, "Esteban Martinez"));
+        ciencia.addElement(new ciencias_salud("Nutricion y terapia fisica ", "Ciencias de salud", "Medicina", (float) 9300.2, "Lucia Montes"));
+        ciencia.addElement(new ciencias_salud("Opcional", "Ciencias de salud", "Medicina", (float) 9300.2, "Esteban Martinez"));
+        cb_ciencias_salud.setModel(ciencia);
     }
 
     /**
@@ -27,7 +57,243 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        estudian = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
+        jt_estudiantes = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        tf_apellido = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        sp_edad = new javax.swing.JSpinner();
+        jLabel5 = new javax.swing.JLabel();
+        rd_sistema = new javax.swing.JRadioButton();
+        rd_licenciatura = new javax.swing.JRadioButton();
+        rd_cienca_salud = new javax.swing.JRadioButton();
+        cb_sistemas = new javax.swing.JComboBox<>();
+        cb_licenciatura = new javax.swing.JComboBox<>();
+        cb_ciencias_salud = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jl_estudiantes = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        rb_hombre = new javax.swing.JRadioButton();
+        rd_mujer = new javax.swing.JRadioButton();
+        sexos = new javax.swing.ButtonGroup();
+        carreras = new javax.swing.ButtonGroup();
+        Eliminar_modificar = new javax.swing.JPopupMenu();
+        Eliminar = new javax.swing.JMenuItem();
+        Modificar = new javax.swing.JMenuItem();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+
+        jLabel1.setText("Nombre: ");
+
+        jLabel2.setText("Apellido: ");
+
+        jLabel4.setText("Edad: ");
+
+        sp_edad.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+
+        jLabel5.setText("Sexo: ");
+
+        carreras.add(rd_sistema);
+        rd_sistema.setText("Sistemas");
+        rd_sistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rd_sistemaActionPerformed(evt);
+            }
+        });
+
+        carreras.add(rd_licenciatura);
+        rd_licenciatura.setText("Licenciatura");
+        rd_licenciatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rd_licenciaturaActionPerformed(evt);
+            }
+        });
+
+        carreras.add(rd_cienca_salud);
+        rd_cienca_salud.setText("Ciencias de salud");
+        rd_cienca_salud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rd_cienca_saludActionPerformed(evt);
+            }
+        });
+
+        cb_sistemas.setEnabled(false);
+        cb_sistemas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_sistemasActionPerformed(evt);
+            }
+        });
+
+        cb_licenciatura.setEnabled(false);
+
+        cb_ciencias_salud.setEnabled(false);
+
+        jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jl_estudiantes.setModel(new DefaultListModel());
+        jl_estudiantes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jl_estudiantesMousePressed(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jl_estudiantes);
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("estudiantes");
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTree1MousePressed(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTree1);
+
+        sexos.add(rb_hombre);
+        rb_hombre.setText("Hombre");
+
+        sexos.add(rd_mujer);
+        rd_mujer.setText("Mujer");
+
+        javax.swing.GroupLayout estudianLayout = new javax.swing.GroupLayout(estudian.getContentPane());
+        estudian.getContentPane().setLayout(estudianLayout);
+        estudianLayout.setHorizontalGroup(
+            estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(estudianLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(estudianLayout.createSequentialGroup()
+                        .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(43, 43, 43)
+                        .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jt_estudiantes, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_apellido, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sp_edad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(rb_hombre, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(estudianLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_sistemas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(estudianLayout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addComponent(rd_sistema)
+                .addGap(61, 61, 61)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(estudianLayout.createSequentialGroup()
+                        .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(estudianLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jButton1))
+                            .addGroup(estudianLayout.createSequentialGroup()
+                                .addGap(127, 127, 127)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rd_mujer))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(estudianLayout.createSequentialGroup()
+                        .addComponent(cb_licenciatura, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addComponent(cb_ciencias_salud, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80))
+                    .addGroup(estudianLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(rd_licenciatura)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rd_cienca_salud)
+                        .addGap(102, 102, 102))))
+        );
+        estudianLayout.setVerticalGroup(
+            estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(estudianLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jt_estudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(tf_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sp_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(rb_hombre)
+                    .addComponent(rd_mujer))
+                .addGap(35, 35, 35)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rd_sistema)
+                    .addComponent(rd_licenciatura)
+                    .addComponent(rd_cienca_salud))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_sistemas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_licenciatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_ciencias_salud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(estudianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
+        );
+
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
+        Eliminar_modificar.add(Eliminar);
+
+        Modificar.setText("Modificar");
+        Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarActionPerformed(evt);
+            }
+        });
+        Eliminar_modificar.add(Modificar);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jMenu3.setText("Menu");
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem1.setText("Alumnos");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem1MouseClicked(evt);
+            }
+        });
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,11 +303,172 @@ public class Main extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 455, Short.MAX_VALUE)
+            .addGap(0, 434, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        estudiante();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void rd_sistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rd_sistemaActionPerformed
+        // TODO add your handling code here:
+         if (rd_sistema.isSelected()) {
+                cb_sistemas.setEnabled(true);
+                
+            }
+    }//GEN-LAST:event_rd_sistemaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String nombre = jt_estudiantes.getText();
+            String apellido = tf_apellido.getText();
+            int edad = (int) sp_edad.getValue();
+            int num_cuenta = 34 + ale.nextInt(10000); 
+
+            String sexo = "";
+            if (rb_hombre.isSelected()) {
+                sexo = "Hombre";
+            } else {
+                sexo = "Mujer";
+
+            }
+
+            carrera carre = null;
+            if (rd_sistema.isSelected()) {
+                carre = (carrera) cb_sistemas.getSelectedItem();
+            }
+            if (rd_licenciatura.isSelected()) {
+                carre = (carrera) cb_licenciatura.getSelectedItem();
+            }
+            if (rd_cienca_salud.isSelected()) {
+                carre = (carrera) cb_ciencias_salud.getSelectedItem();
+            }
+
+            estudiantes alumno = new estudiantes(nombre, apellido, num_cuenta, edad, sexo, carre);
+            DefaultListModel model = (DefaultListModel) jl_estudiantes.getModel();
+            model.addElement(new estudiantes(nombre, apellido, num_cuenta, edad, sexo, carre));
+            jl_estudiantes.setModel(model);
+            JOptionPane.showMessageDialog(this, "Correcto");
+            jt_estudiantes.setText("");
+            tf_apellido.setText("");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "ERROR");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void rd_licenciaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rd_licenciaturaActionPerformed
+        // TODO add your handling code here:
+        if (rd_licenciatura.isSelected()) {
+            cb_licenciatura.setEnabled(true);
+
+        }
+    }//GEN-LAST:event_rd_licenciaturaActionPerformed
+
+    private void rd_cienca_saludActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rd_cienca_saludActionPerformed
+        // TODO add your handling code here:
+        if (rd_cienca_salud.isSelected()) {
+            cb_ciencias_salud.setEnabled(true);
+
+        }
+    }//GEN-LAST:event_rd_cienca_saludActionPerformed
+
+    private void cb_sistemasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_sistemasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_sistemasActionPerformed
+
+    private void jl_estudiantesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_estudiantesMousePressed
+        // TODO add your handling code here:
+        
+        ////
+        if(evt.isMetaDown()){
+            DefaultTreeModel tree_model = (DefaultTreeModel) jTree1.getModel(); 
+            DefaultMutableTreeNode model_raiz = (DefaultMutableTreeNode) tree_model.getRoot();
+                    DefaultMutableTreeNode persona_nodo;
+                    String sexo = ""; 
+                    if(rb_hombre.isSelected()){
+                        sexo = "Hombre"; 
+                    }else {
+                        sexo = "Mujer"; 
+                    }
+                    
+                     carrera carre = null;
+            if (rd_sistema.isSelected()) {
+                carre = (carrera) cb_sistemas.getSelectedItem();
+            }
+            if (rd_licenciatura.isSelected()) {
+                carre = (carrera) cb_licenciatura.getSelectedItem();
+            }
+            if (rd_cienca_salud.isSelected()) {
+                carre = (carrera) cb_ciencias_salud.getSelectedItem();
+            }
+
+            persona_nodo = new DefaultMutableTreeNode(new estudiantes(jt_estudiantes.getText(), tf_apellido.getText(), ale.nextInt(3), (Integer) sp_edad.getValue(), sexo, carre));
+            DefaultMutableTreeNode carrera_nodo = new DefaultMutableTreeNode(carre);
+
+            carrera_nodo.add(persona_nodo);
+            model_raiz.add(carrera_nodo);
+            tree_model.reload();
+
+        }
+    }//GEN-LAST:event_jl_estudiantesMousePressed
+
+    private void jTree1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTree1MousePressed
+        // TODO add your handling code here:
+       if(evt.isMetaDown()){
+       
+           if (evt.isMetaDown()) {
+               // aca capturamos la fila mas cercana a donde se hace click 
+               int row = jTree1.getClosestRowForLocation(evt.getX(), evt.getY());
+               // aca la dejamos como fila seleccionada
+               jTree1.setSelectionRow(row);
+               // sacamos el objeto 
+               Object obj = jTree1.getSelectionPath().getLastPathComponent();
+               // agarramos el nodo seleccionado que es el objeto 
+               nodo_seleccionado = (DefaultMutableTreeNode) obj;
+               // se valida que hayan clientes en el nodo 
+               if (nodo_seleccionado.getUserObject() instanceof carrera) {
+                   cliente_seleccionado = (carrera) nodo_seleccionado.getUserObject(); // se pasa a la variable que es persona 
+                   Eliminar_modificar.show(evt.getComponent(), evt.getX(), evt.getY()); // se muestra el menu 
+               }
+
+           }
+
+        }
+    }//GEN-LAST:event_jTree1MousePressed
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        // TODO add your handling code here:
+        int delete = JOptionPane.showConfirmDialog(this, "Seguro de eliminar? ", "Confirm", JOptionPane.YES_OPTION, JOptionPane.QUESTION_MESSAGE); // se manda el mensaje 
+        if (delete == JOptionPane.OK_OPTION) { // se confirma la opcion 
+            DefaultTreeModel model = (DefaultTreeModel) jTree1.getModel();  // se captura el modelo 
+            model.removeNodeFromParent(nodo_seleccionado); // se remueve el modelo 
+            model.reload(); // se manda la imagen 
+        }
+
+
+    }//GEN-LAST:event_EliminarActionPerformed
+
+    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel model = (DefaultTreeModel) jTree1.getModel();
+        cliente_seleccionado.setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
+        model.reload();
+    }//GEN-LAST:event_ModificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,7 +504,46 @@ public class Main extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    public void estudiante(){
+         estudian.pack();
+        estudian.setModal(true);
+        estudian.setLocationRelativeTo(this);
+        estudian.setVisible(true);
+    }
+    DefaultMutableTreeNode nodo_seleccionado; 
+    carrera cliente_seleccionado; 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Eliminar;
+    private javax.swing.JPopupMenu Eliminar_modificar;
+    private javax.swing.JMenuItem Modificar;
+    private javax.swing.ButtonGroup carreras;
+    private javax.swing.JComboBox<String> cb_ciencias_salud;
+    private javax.swing.JComboBox<String> cb_licenciatura;
+    private javax.swing.JComboBox<String> cb_sistemas;
+    private javax.swing.JDialog estudian;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTree jTree1;
+    private javax.swing.JList<String> jl_estudiantes;
+    private javax.swing.JTextField jt_estudiantes;
+    private javax.swing.JRadioButton rb_hombre;
+    private javax.swing.JRadioButton rd_cienca_salud;
+    private javax.swing.JRadioButton rd_licenciatura;
+    private javax.swing.JRadioButton rd_mujer;
+    private javax.swing.JRadioButton rd_sistema;
+    private javax.swing.ButtonGroup sexos;
+    private javax.swing.JSpinner sp_edad;
+    private javax.swing.JTextField tf_apellido;
     // End of variables declaration//GEN-END:variables
 }

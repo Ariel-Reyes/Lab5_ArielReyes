@@ -31,7 +31,7 @@ public class ciencias_salud extends carrera {
 
     @Override
     public String toString() {
-        return "ciencias_salud{" + "tipo=" + tipo + '}';
+        return  tipo  ;
     }
 
 }
