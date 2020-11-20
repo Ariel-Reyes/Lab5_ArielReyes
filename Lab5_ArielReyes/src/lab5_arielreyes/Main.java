@@ -844,10 +844,12 @@ Random ale = new Random();
         // TODO add your handling code here:
         
         ////
+        if(jl_estudiantes.getSelectedIndex() >=0){
         if(evt.isMetaDown()){
             DefaultTreeModel tree_model = (DefaultTreeModel) jTree1.getModel(); 
             DefaultMutableTreeNode model_raiz = (DefaultMutableTreeNode) tree_model.getRoot();
-                    DefaultMutableTreeNode persona_nodo;
+                    //DefaultMutableTreeNode persona_nodo;
+                    DefaultListModel lista_model = (DefaultListModel)jl_estudiantes.getModel();
                     String sexo = ""; 
                     if(rb_hombre.isSelected()){
                         sexo = "Hombre"; 
@@ -865,13 +867,42 @@ Random ale = new Random();
             if (rd_cienca_salud.isSelected()) {
                 carre = (carrera) cb_ciencias_salud.getSelectedItem();
             }
-
-            persona_nodo = new DefaultMutableTreeNode(new estudiantes(jt_estudiantes.getText(), tf_apellido.getText(), ale.nextInt(3), (Integer) sp_edad.getValue(), sexo, carre));
-            DefaultMutableTreeNode carrera_nodo = new DefaultMutableTreeNode(carre);
-
-            carrera_nodo.add(persona_nodo);
-            model_raiz.add(carrera_nodo);
+            
+             String nombre = jt_estudiantes.getText();
+            String apellido = tf_apellido.getText();
+            int edad = (int) sp_edad.getValue();
+            int num_cuenta = 34 + ale.nextInt(10000); 
+            
+            nombre = ((estudiantes)lista_model.get(jl_estudiantes.getSelectedIndex())).getNombre();
+            apellido = ((estudiantes)lista_model.get(jl_estudiantes.getSelectedIndex())).getApellido();
+            edad = ((estudiantes)lista_model.get(jl_estudiantes.getSelectedIndex())).getEdad();
+            num_cuenta = ((estudiantes)lista_model.get(jl_estudiantes.getSelectedIndex())).getNum_cuenta();
+            sexo = ((estudiantes)lista_model.get(jl_estudiantes.getSelectedIndex())).getSexo();
+            carre = ((estudiantes)lista_model.get(jl_estudiantes.getSelectedIndex())).getCarre();
+            int centinela = -1; 
+            for (int i = 0; i < model_raiz.getChildCount(); i++) {
+                if(model_raiz.getChildAt(i).toString().equals(carre)){
+                DefaultMutableTreeNode P = new DefaultMutableTreeNode(new estudiantes(nombre, apellido, num_cuenta, edad, sexo, carre));
+                ((DefaultMutableTreeNode) model_raiz.getChildAt(i)).add(P);
+                centinela = 1;
+                }
+            }
+            if(centinela == -1){
+            DefaultMutableTreeNode n = new DefaultMutableTreeNode(carre);
+            DefaultMutableTreeNode p = new DefaultMutableTreeNode(new estudiantes(nombre, apellido, num_cuenta, edad, sexo, carre));
+            n.add(p);
+            model_raiz.add(n);
+            }
             tree_model.reload();
+        }
+            
+//
+////            persona_nodo = new DefaultMutableTreeNode(new estudiantes(jt_estudiantes.getText(), tf_apellido.getText(), ale.nextInt(3), (Integer) sp_edad.getValue(), sexo, carre));
+////            DefaultMutableTreeNode carrera_nodo = new DefaultMutableTreeNode(carre);
+//
+//            carrera_nodo.add(persona_nodo);
+//            model_raiz.add(carrera_nodo);
+//            tree_model.reload();
 
         }
     }//GEN-LAST:event_jl_estudiantesMousePressed
@@ -1012,7 +1043,7 @@ Random ale = new Random();
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-
+if(cla.size()==0){JOptionPane.showMessageDialog(this, "Aun no existen clases para los maestro :( ");} else {
         try {
 
             String nombre = jTextField8.getText();
@@ -1035,6 +1066,7 @@ Random ale = new Random();
             JOptionPane.showMessageDialog(this, "ERROR");
 
         }
+}
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
