@@ -5,6 +5,7 @@
  */
 package lab5_arielreyes;
 
+import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
@@ -100,10 +101,45 @@ Random ale = new Random();
         jTextField4 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        Clases = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jButton3 = new javax.swing.JButton();
+        aire = new javax.swing.ButtonGroup();
+        Maestro = new javax.swing.JDialog();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jFormattedTextField4 = new javax.swing.JFormattedTextField();
+        jButton5 = new javax.swing.JButton();
+        cb_class = new javax.swing.JComboBox<>();
+        lista_maestro_clase = new javax.swing.JDialog();
+        jLabel24 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jl_maestro_clases = new javax.swing.JList<>();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
 
         jLabel1.setText("Nombre: ");
 
@@ -404,6 +440,217 @@ Random ale = new Random();
 
         jLabel10.setText("jLabel10");
 
+        jLabel12.setText("Crear clase ");
+
+        jLabel13.setText("Nombre: ");
+
+        jLabel14.setText("Seccion: ");
+
+        jLabel15.setText("Edificacion: ");
+
+        jLabel16.setText("Salon: ");
+
+        jLabel17.setText("Aire acondicionado: ");
+
+        aire.add(jRadioButton1);
+        jRadioButton1.setText("SI");
+
+        aire.add(jRadioButton2);
+        jRadioButton2.setText("No");
+
+        jButton3.setText("Crear");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ClasesLayout = new javax.swing.GroupLayout(Clases.getContentPane());
+        Clases.getContentPane().setLayout(ClasesLayout);
+        ClasesLayout.setHorizontalGroup(
+            ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClasesLayout.createSequentialGroup()
+                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ClasesLayout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ClasesLayout.createSequentialGroup()
+                                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel14))
+                                .addGap(18, 18, 18)
+                                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(ClasesLayout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel17)
+                            .addGroup(ClasesLayout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ClasesLayout.createSequentialGroup()
+                            .addGap(123, 123, 123)
+                            .addComponent(jRadioButton1)
+                            .addGap(85, 85, 85)
+                            .addComponent(jRadioButton2))
+                        .addGroup(ClasesLayout.createSequentialGroup()
+                            .addGap(255, 255, 255)
+                            .addComponent(jLabel12)))
+                    .addGroup(ClasesLayout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(353, Short.MAX_VALUE))
+        );
+        ClasesLayout.setVerticalGroup(
+            ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClasesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addGap(43, 43, 43)
+                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addGroup(ClasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58))
+        );
+
+        jLabel18.setText("Maestros ");
+
+        jLabel19.setText("Nombre: ");
+
+        jLabel20.setText("Apellido: ");
+
+        jLabel21.setText("Salario: ");
+
+        jLabel22.setText("Edad: ");
+
+        jLabel23.setText("Clases");
+
+        jButton5.setText("Agregar Maestro");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout MaestroLayout = new javax.swing.GroupLayout(Maestro.getContentPane());
+        Maestro.getContentPane().setLayout(MaestroLayout);
+        MaestroLayout.setHorizontalGroup(
+            MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaestroLayout.createSequentialGroup()
+                .addGap(209, 209, 209)
+                .addComponent(jLabel18)
+                .addContainerGap(320, Short.MAX_VALUE))
+            .addGroup(MaestroLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel21)
+                        .addGroup(MaestroLayout.createSequentialGroup()
+                            .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(MaestroLayout.createSequentialGroup()
+                                    .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel20)
+                                        .addComponent(jLabel19))
+                                    .addGap(38, 38, 38))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaestroLayout.createSequentialGroup()
+                                    .addComponent(jLabel22)
+                                    .addGap(43, 43, 43)))
+                            .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jFormattedTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jTextField8)
+                                .addComponent(jTextField9)))
+                        .addGroup(MaestroLayout.createSequentialGroup()
+                            .addComponent(jLabel23)
+                            .addGap(38, 38, 38)
+                            .addComponent(cb_class, 0, 124, Short.MAX_VALUE)))
+                    .addComponent(jButton5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        MaestroLayout.setVerticalGroup(
+            MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(MaestroLayout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addGap(40, 40, 40)
+                        .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel21))
+                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23)
+                    .addComponent(cb_class, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jButton5)
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        jLabel24.setText("Listar Maestros Clases");
+
+        jl_maestro_clases.setModel(new DefaultListModel());
+        jScrollPane3.setViewportView(jl_maestro_clases);
+
+        javax.swing.GroupLayout lista_maestro_claseLayout = new javax.swing.GroupLayout(lista_maestro_clase.getContentPane());
+        lista_maestro_clase.getContentPane().setLayout(lista_maestro_claseLayout);
+        lista_maestro_claseLayout.setHorizontalGroup(
+            lista_maestro_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lista_maestro_claseLayout.createSequentialGroup()
+                .addGroup(lista_maestro_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lista_maestro_claseLayout.createSequentialGroup()
+                        .addGap(324, 324, 324)
+                        .addComponent(jLabel24))
+                    .addGroup(lista_maestro_claseLayout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(184, Short.MAX_VALUE))
+        );
+        lista_maestro_claseLayout.setVerticalGroup(
+            lista_maestro_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lista_maestro_claseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel24)
+                .addGap(59, 59, 59)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(176, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu3.setText("Menu");
@@ -434,6 +681,31 @@ Random ale = new Random();
             }
         });
         jMenu3.add(jMenuItem2);
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem3.setText("Crear clase ");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem3);
+
+        jMenuItem4.setText("Agregar Maestro");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenuItem5.setText("Lista Maestro y Clases");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem5);
 
         jMenuBar1.add(jMenu3);
 
@@ -660,6 +932,82 @@ Random ale = new Random();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        clasee();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            String nombre = jTextField5.getText();
+            int seccion = Integer.parseInt(jFormattedTextField2.getText());
+            String edificacion = jTextField6.getText();
+            String salon = jTextField7.getText();
+            String aire = "";
+            if (jRadioButton1.isSelected()) {
+                aire = "SI";
+            } else {
+                aire = "NO";
+            }
+
+            clases clas = new clases(nombre, seccion, edificacion, salon, edificacion);
+
+            cla.add(clas);
+
+            DefaultComboBoxModel mo = (DefaultComboBoxModel)cb_class.getModel(); 
+            mo.addElement(clas);
+            DefaultListModel mod = (DefaultListModel) jl_maestro_clases.getModel();
+            mod.addElement(clas);
+            jl_maestro_clases.setModel(mod);
+
+            cb_class.setModel(mo);
+            JOptionPane.showMessageDialog(this, "Correcto");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "ERROR");
+        }
+        
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        Mastroo();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        try {
+          
+            String nombre = jTextField8.getText();
+            String apellido = jTextField9.getText();
+            float salario = Float.parseFloat(jFormattedTextField3.getText());
+            int edad = Integer.parseInt(jFormattedTextField4.getText());
+           clases cl = (clases) cb_class.getSelectedItem(); 
+           ArrayList<clases> claa = new ArrayList(); 
+            claa.add(cl);
+
+            Maestro ma = new Maestro(nombre, apellido, salario, edad);
+            ma.setClase(claa);
+            DefaultListModel mod = (DefaultListModel) jl_maestro_clases.getModel();
+            mod.addElement(ma);
+            jl_maestro_clases.setModel(mod);
+
+            JOptionPane.showMessageDialog(this, "Correcto");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "ERROR");
+            
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        Lista_ma_c();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -708,26 +1056,72 @@ Random ale = new Random();
         Carreras.setLocationRelativeTo(this);
         Carreras.setVisible(true);
     }
+
+    public void clasee() {
+        Clases.pack();
+        Clases.setModal(true);
+        Clases.setLocationRelativeTo(this);
+        Clases.setVisible(true);
+    }
+
+    public void Mastroo() {
+        Maestro.pack();
+        Maestro.setModal(true);
+        Maestro.setLocationRelativeTo(this);
+        Maestro.setVisible(true);
+    }
+
+    public void Lista_ma_c() {
+        lista_maestro_clase.pack();
+        lista_maestro_clase.setModal(true);
+        lista_maestro_clase.setLocationRelativeTo(this);
+        lista_maestro_clase.setVisible(true);
+    }
+
+
     DefaultMutableTreeNode nodo_seleccionado; 
     carrera cliente_seleccionado; 
+    ArrayList <clases> cla = new ArrayList(); 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog Carreras;
+    private javax.swing.JDialog Clases;
     private javax.swing.JMenuItem Eliminar;
     private javax.swing.JPopupMenu Eliminar_modificar;
+    private javax.swing.JDialog Maestro;
     private javax.swing.JMenuItem Modificar;
+    private javax.swing.ButtonGroup aire;
     private javax.swing.ButtonGroup carreras;
     private javax.swing.JComboBox<String> cb_ciencias_salud;
+    private javax.swing.JComboBox<String> cb_class;
     private javax.swing.JComboBox<String> cb_licenciatura;
     private javax.swing.JComboBox<String> cb_sistemas;
     private javax.swing.JDialog estudian;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton5;
     private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JFormattedTextField jFormattedTextField4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -739,15 +1133,28 @@ Random ale = new Random();
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTree jTree1;
     private javax.swing.JList<String> jl_estudiantes;
+    private javax.swing.JList<String> jl_maestro_clases;
     private javax.swing.JTextField jt_estudiantes;
+    private javax.swing.JDialog lista_maestro_clase;
     private javax.swing.JRadioButton rb_hombre;
     private javax.swing.JRadioButton rd_cienca_salud;
     private javax.swing.JRadioButton rd_ciencia;
