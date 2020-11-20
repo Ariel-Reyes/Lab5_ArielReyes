@@ -133,6 +133,10 @@ Random ale = new Random();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jl_maestro_clases = new javax.swing.JList<>();
+        menu_lista_maestro_clases = new javax.swing.JPopupMenu();
+        Delete = new javax.swing.JMenuItem();
+        Mod = new javax.swing.JMenuItem();
+        Mod_clases = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -625,6 +629,11 @@ Random ale = new Random();
         jLabel24.setText("Listar Maestros Clases");
 
         jl_maestro_clases.setModel(new DefaultListModel());
+        jl_maestro_clases.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_maestro_clasesMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(jl_maestro_clases);
 
         javax.swing.GroupLayout lista_maestro_claseLayout = new javax.swing.GroupLayout(lista_maestro_clase.getContentPane());
@@ -650,6 +659,30 @@ Random ale = new Random();
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(176, Short.MAX_VALUE))
         );
+
+        Delete.setText("Eliminar");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteActionPerformed(evt);
+            }
+        });
+        menu_lista_maestro_clases.add(Delete);
+
+        Mod.setText("Modificar_Maestro");
+        Mod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModActionPerformed(evt);
+            }
+        });
+        menu_lista_maestro_clases.add(Mod);
+
+        Mod_clases.setText("Modificar_clases");
+        Mod_clases.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Mod_clasesActionPerformed(evt);
+            }
+        });
+        menu_lista_maestro_clases.add(Mod_clases);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -916,17 +949,17 @@ Random ale = new Random();
                 DefaultComboBoxModel lic_mo = (DefaultComboBoxModel) cb_licenciatura.getModel();
                 lic_mo.addElement(lic);
                 cb_licenciatura.setModel(lic_mo);
-                
+
             }
-            if(rd_ciencia.isSelected()){
+            if (rd_ciencia.isSelected()) {
                 ciencias_salud cin = new ciencias_salud(nombre_carrera, nombre, facultad, costo_mensual, jefe_carrera);
-                DefaultComboBoxModel cien  = (DefaultComboBoxModel)cb_ciencias_salud.getModel(); 
+                DefaultComboBoxModel cien = (DefaultComboBoxModel) cb_ciencias_salud.getModel();
                 cien.addElement(cin);
                 cb_ciencias_salud.setModel(cien);
-                
+
             }
             JOptionPane.showMessageDialog(this, "Correcto");
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "ERROR");
         }
@@ -956,7 +989,7 @@ Random ale = new Random();
 
             cla.add(clas);
 
-            DefaultComboBoxModel mo = (DefaultComboBoxModel)cb_class.getModel(); 
+            DefaultComboBoxModel mo = (DefaultComboBoxModel) cb_class.getModel();
             mo.addElement(clas);
             DefaultListModel mod = (DefaultListModel) jl_maestro_clases.getModel();
             mod.addElement(clas);
@@ -968,7 +1001,7 @@ Random ale = new Random();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "ERROR");
         }
-        
+
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -979,14 +1012,15 @@ Random ale = new Random();
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+
         try {
-          
+
             String nombre = jTextField8.getText();
             String apellido = jTextField9.getText();
             float salario = Float.parseFloat(jFormattedTextField3.getText());
             int edad = Integer.parseInt(jFormattedTextField4.getText());
-           clases cl = (clases) cb_class.getSelectedItem(); 
-           ArrayList<clases> claa = new ArrayList(); 
+            clases cl = (clases) cb_class.getSelectedItem();
+            ArrayList<clases> claa = new ArrayList();
             claa.add(cl);
 
             Maestro ma = new Maestro(nombre, apellido, salario, edad);
@@ -999,7 +1033,7 @@ Random ale = new Random();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "ERROR");
-            
+
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -1007,6 +1041,53 @@ Random ale = new Random();
         // TODO add your handling code here:
         Lista_ma_c();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jl_maestro_clasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_maestro_clasesMouseClicked
+        // TODO add your handling code here:
+        if (jl_maestro_clases.getSelectedIndex() >= 0) { // se verifica este seleccionado algo de la lista 
+
+            if (evt.isMetaDown()) { // esto se hace para que se despliegue el menu opcional dandole click derecho a lo que esta en nuestra lista 
+                menu_lista_maestro_clases.show(evt.getComponent(), evt.getX(), evt.getY());  // esto se hace para que se muestre el menu (el padre (el objeto (el jList)), posicion x , posicion y)
+            }
+
+        }
+    }//GEN-LAST:event_jl_maestro_clasesMouseClicked
+
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel(); 
+            model.remove(jl_maestro_clases.getSelectedIndex()); 
+            jl_maestro_clases.setModel(model);
+            JOptionPane.showMessageDialog(this, "Eliminado correctamente");
+    }//GEN-LAST:event_DeleteActionPerformed
+
+    private void ModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModActionPerformed
+        // TODO add your handling code here:
+       try{ if (jl_maestro_clases.getSelectedIndex() >= 0) {
+            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
+
+            ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
+            jl_maestro_clases.setModel(model);
+        }
+       }
+       catch(Exception e){
+           JOptionPane.showMessageDialog(this, "Error");
+       }
+    }//GEN-LAST:event_ModActionPerformed
+
+    private void Mod_clasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mod_clasesActionPerformed
+        // TODO add your handling code here:
+try{
+        if (jl_maestro_clases.getSelectedIndex() >= 0) {
+            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
+                ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
+                jl_maestro_clases.setModel(model);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error");
+        }
+    }//GEN-LAST:event_Mod_clasesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1086,9 +1167,12 @@ Random ale = new Random();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog Carreras;
     private javax.swing.JDialog Clases;
+    private javax.swing.JMenuItem Delete;
     private javax.swing.JMenuItem Eliminar;
     private javax.swing.JPopupMenu Eliminar_modificar;
     private javax.swing.JDialog Maestro;
+    private javax.swing.JMenuItem Mod;
+    private javax.swing.JMenuItem Mod_clases;
     private javax.swing.JMenuItem Modificar;
     private javax.swing.ButtonGroup aire;
     private javax.swing.ButtonGroup carreras;
@@ -1155,6 +1239,7 @@ Random ale = new Random();
     private javax.swing.JList<String> jl_maestro_clases;
     private javax.swing.JTextField jt_estudiantes;
     private javax.swing.JDialog lista_maestro_clase;
+    private javax.swing.JPopupMenu menu_lista_maestro_clases;
     private javax.swing.JRadioButton rb_hombre;
     private javax.swing.JRadioButton rd_cienca_salud;
     private javax.swing.JRadioButton rd_ciencia;
