@@ -137,6 +137,34 @@ Random ale = new Random();
         Delete = new javax.swing.JMenuItem();
         Mod = new javax.swing.JMenuItem();
         Mod_clases = new javax.swing.JMenuItem();
+        Modificar_clases = new javax.swing.JDialog();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jFormattedTextField5 = new javax.swing.JFormattedTextField();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jButton4 = new javax.swing.JButton();
+        Modificar_Maestro = new javax.swing.JDialog();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jFormattedTextField6 = new javax.swing.JFormattedTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jFormattedTextField7 = new javax.swing.JFormattedTextField();
+        jLabel37 = new javax.swing.JLabel();
+        cb_class1 = new javax.swing.JComboBox<>();
+        jButton6 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -684,6 +712,193 @@ Random ale = new Random();
         });
         menu_lista_maestro_clases.add(Mod_clases);
 
+        jLabel25.setText("Modificar clase ");
+
+        jLabel26.setText("Nombre: ");
+
+        jLabel27.setText("Seccion: ");
+
+        jLabel28.setText("Edificacion: ");
+
+        jLabel29.setText("Salon: ");
+
+        jLabel30.setText("Aire acondicionado: ");
+
+        aire.add(jRadioButton3);
+        jRadioButton3.setText("SI");
+
+        aire.add(jRadioButton4);
+        jRadioButton4.setText("No");
+
+        jButton4.setText("Modificar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Modificar_clasesLayout = new javax.swing.GroupLayout(Modificar_clases.getContentPane());
+        Modificar_clases.getContentPane().setLayout(Modificar_clasesLayout);
+        Modificar_clasesLayout.setHorizontalGroup(
+            Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jLabel25))
+                    .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel27)
+                                .addComponent(jLabel26))
+                            .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel29)
+                                    .addComponent(jLabel28))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                            .addComponent(jFormattedTextField5)
+                            .addComponent(jTextField11)
+                            .addComponent(jTextField12)))
+                    .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel30))
+                    .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(jRadioButton3)
+                        .addGap(61, 61, 61)
+                        .addComponent(jRadioButton4))
+                    .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jButton4)))
+                .addContainerGap(136, Short.MAX_VALUE))
+        );
+        Modificar_clasesLayout.setVerticalGroup(
+            Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Modificar_clasesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel25)
+                .addGap(41, 41, 41)
+                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(jLabel30)
+                .addGap(26, 26, 26)
+                .addGroup(Modificar_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton4))
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        jLabel31.setText("Modificar Maestro ");
+
+        jLabel33.setText("Apellido: ");
+
+        jLabel34.setText("Nombre: ");
+
+        jLabel32.setText("Salario: ");
+
+        jLabel35.setText("Edad: ");
+
+        jLabel36.setText("Edad: ");
+
+        jLabel37.setText("Clases");
+
+        jButton6.setText("Modificar Maestro");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Modificar_MaestroLayout = new javax.swing.GroupLayout(Modificar_Maestro.getContentPane());
+        Modificar_Maestro.getContentPane().setLayout(Modificar_MaestroLayout);
+        Modificar_MaestroLayout.setHorizontalGroup(
+            Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(jLabel31))
+                    .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel33)
+                            .addComponent(jLabel34)
+                            .addComponent(jLabel32)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel37))
+                        .addGap(18, 18, 18)
+                        .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField13)
+                            .addComponent(jTextField14)
+                            .addComponent(jFormattedTextField6)
+                            .addComponent(jFormattedTextField7)
+                            .addComponent(cb_class1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(201, Short.MAX_VALUE))
+            .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jButton6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                    .addGap(208, 208, 208)
+                    .addComponent(jLabel35)
+                    .addContainerGap(209, Short.MAX_VALUE)))
+        );
+        Modificar_MaestroLayout.setVerticalGroup(
+            Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel31)
+                .addGap(53, 53, 53)
+                .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel34))
+                .addGap(42, 42, 42)
+                .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(jFormattedTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jFormattedTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(cb_class1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jButton6)
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(Modificar_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Modificar_MaestroLayout.createSequentialGroup()
+                    .addGap(206, 206, 206)
+                    .addComponent(jLabel35)
+                    .addContainerGap(206, Short.MAX_VALUE)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu3.setText("Menu");
@@ -1027,6 +1242,7 @@ Random ale = new Random();
             jl_maestro_clases.setModel(mod);
 
             cb_class.setModel(mo);
+            cb_class1.setModel(mo);
             JOptionPane.showMessageDialog(this, "Correcto");
 
         } catch (Exception e) {
@@ -1096,10 +1312,11 @@ if(cla.size()==0){JOptionPane.showMessageDialog(this, "Aun no existen clases par
     private void ModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModActionPerformed
         // TODO add your handling code here:
        try{ if (jl_maestro_clases.getSelectedIndex() >= 0) {
-            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
-
-            ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
-            jl_maestro_clases.setModel(model);
+           mod_master();
+//            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
+//
+//            ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
+//            jl_maestro_clases.setModel(model);
         }
        }
        catch(Exception e){
@@ -1110,16 +1327,77 @@ if(cla.size()==0){JOptionPane.showMessageDialog(this, "Aun no existen clases par
     private void Mod_clasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mod_clasesActionPerformed
         // TODO add your handling code here:
 try{
-        if (jl_maestro_clases.getSelectedIndex() >= 0) {
-            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
-                ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
-                jl_maestro_clases.setModel(model);
-            }
+    
+    mod_clases();
+    
+//        if (jl_maestro_clases.getSelectedIndex() >= 0) {
+//            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
+//                ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre: "));
+//                jl_maestro_clases.setModel(model);
+//            }
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error");
         }
     }//GEN-LAST:event_Mod_clasesActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+        // TODO add your handling code here:
+        
+        try{
+        if (jl_maestro_clases.getSelectedIndex() >= 0) {
+            
+            
+            String nombre = jTextField10.getText();
+            String aire = ""; 
+            if(jRadioButton3.isSelected()){
+                aire = "si";
+            } else {
+                aire = "no";
+            }
+            DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
+            ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(nombre);
+            ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setSeccion(Integer.parseInt(jFormattedTextField5.getText()));
+            ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setEdificio(jTextField11.getText());
+            ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setSalon(jTextField12.getText());
+            ((clases) model.get(jl_maestro_clases.getSelectedIndex())).setAire_codicionado(aire);
+            jl_maestro_clases.setModel(model);
+            JOptionPane.showMessageDialog(this, "Correcto");
+        } 
+        }
+        
+        catch(Exception e){
+                       JOptionPane.showMessageDialog(this, "Error");
+
+        }
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (jl_maestro_clases.getSelectedIndex() >= 0) {
+                
+                mod_master();
+                DefaultListModel model = (DefaultListModel) jl_maestro_clases.getModel();
+                String nombre = jTextField13.getText();
+                ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setNombre(nombre);
+                ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setApellido(jTextField14.getText());
+                ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setSalario(Float.parseFloat(jFormattedTextField6.getText()));
+                ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setEdad(Integer.parseInt(jFormattedTextField7.getText()));
+                clases s = (clases) cb_class1.getSelectedItem();
+                ArrayList<clases> clax = new ArrayList();                
+                clax.add(s);                
+                ((Maestro) model.get(jl_maestro_clases.getSelectedIndex())).setClase(clax);
+                
+                jl_maestro_clases.setModel(model);
+            }
+        }
+       catch(Exception e){
+           JOptionPane.showMessageDialog(this, "Error");
+       }
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1132,7 +1410,7 @@ try{
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -1190,7 +1468,19 @@ try{
         lista_maestro_clase.setLocationRelativeTo(this);
         lista_maestro_clase.setVisible(true);
     }
-
+  public void mod_clases() {
+        Modificar_clases.pack();
+        Modificar_clases.setModal(true);
+        Modificar_clases.setLocationRelativeTo(this);
+        Modificar_clases.setVisible(true);
+    }
+  
+          public void mod_master() {
+        Modificar_Maestro.pack();
+        Modificar_Maestro.setModal(true);
+        Modificar_Maestro.setLocationRelativeTo(this);
+        Modificar_Maestro.setVisible(true);
+    }
 
     DefaultMutableTreeNode nodo_seleccionado; 
     carrera cliente_seleccionado; 
@@ -1206,21 +1496,29 @@ try{
     private javax.swing.JMenuItem Mod;
     private javax.swing.JMenuItem Mod_clases;
     private javax.swing.JMenuItem Modificar;
+    private javax.swing.JDialog Modificar_Maestro;
+    private javax.swing.JDialog Modificar_clases;
     private javax.swing.ButtonGroup aire;
     private javax.swing.ButtonGroup carreras;
     private javax.swing.JComboBox<String> cb_ciencias_salud;
     private javax.swing.JComboBox<String> cb_class;
+    private javax.swing.JComboBox<String> cb_class1;
     private javax.swing.JComboBox<String> cb_licenciatura;
     private javax.swing.JComboBox<String> cb_sistemas;
     private javax.swing.JDialog estudian;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JFormattedTextField jFormattedTextField3;
     private javax.swing.JFormattedTextField jFormattedTextField4;
+    private javax.swing.JFormattedTextField jFormattedTextField5;
+    private javax.swing.JFormattedTextField jFormattedTextField6;
+    private javax.swing.JFormattedTextField jFormattedTextField7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1238,7 +1536,20 @@ try{
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1254,10 +1565,17 @@ try{
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

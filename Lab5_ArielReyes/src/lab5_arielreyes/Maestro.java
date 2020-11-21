@@ -70,8 +70,10 @@ public class Maestro {
 
     @Override
     public String toString() {
-        return nombre ;
+        return  nombre + ", apellido=" + apellido + ", salario=" + salario + ", edad=" + edad + ", clase=" + clase ;
     }
+
+    
     
     
 }
